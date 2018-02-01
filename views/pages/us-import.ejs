@@ -21,14 +21,14 @@
                             <% produkter.forEach(function(data) { %>
                                <div class="card mb-3" style="width: 18rem;">
                                  <a href="/produkt#varenr=<%= data.varenr %>">
-                                     <img class="card-img-top" src='assets/media/<%= data.billede %>' alt='<%= data.type %>'>
+                                     <img class="card-img-top" src='/assets/media/<%= data.billede %>' alt='<%= data.type %>'>
                                 </a>
                                  <div class="card-body">
                                    <h5 class="card-title"><%= data.navn %></h5>
                                    <footer class="blockquote-footer"><%= data.type %></footer>
                                    <p class="card-text"><%= data.beskrivelse %></p>
                                    <p class="card-text">Pris: <%= data.pris %>,00,-</p>
-                                   <a href="/produkt/<%= data.varenr %>" class="btn btn-primary">Læs mere</a>
+                                   <a href="/produkt/varenr=<%= data.varenr %>" class="btn btn-primary">Læs mere</a>
                                  </div>
                                </div>
                              <% }) %>

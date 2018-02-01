@@ -1,9 +1,37 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <% include ../partials/head %>
-</head>
-<body>
 
-</body>
+  <head>
+      <% include ../partials/head %>
+  </head>
+
+  <body id="page-top">
+    <header>
+        <% include ../partials/header %>
+    </header>
+    <main>
+        <div class="top-banner-tie"></div>
+
+        <div class="container-fluid p-0">
+            <section class="slips-section p-3 p-lg-5 d-flex d-column">
+                <div class="my-auto">
+                    <div class="row justify-content-around mb-5">
+
+                               <div class="card">
+                                     <img class="card-img-top" src='/assets/media/<%= produkter.billede %>' alt='<%= produkter.type %>'>
+                                 <div class="card-body">
+                                   <h5 class="card-title"><%= produkter.navn %></h5>
+                                   <footer class="blockquote-footer"><%= produkter.type %></footer>
+                                   <p class="card-text"><%= produkter.beskrivelse %></p>
+                                   <p class="card-text">Pris: <%= produkter.pris %>,00,-</p>
+                                 </div>
+                               </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <% include ../partials/scripts %>
+  </body>
+
 </html>

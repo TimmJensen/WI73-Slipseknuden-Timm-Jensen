@@ -1,0 +1,11 @@
+<% produkter.forEach(function(data){ %>
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=`assets/media/${produkter.billede}` alt="Kina Slips">
+        <div class="card-body">
+            <h5 class="card-title"><%= produkter.navn %></h5>
+            <p class="card-text"><%= produkter.beskrivelse</p>
+            <p class="card-text price-after">Pris: <%= produkter.pris,-%></p>
+            <a href=`/produkt#varenr=${produkter.varenr}` class="btn btn-info">Læs mere</a>
+        </div>
+    </div>
+<% }) %>

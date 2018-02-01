@@ -30,9 +30,7 @@ app.get('/', function (req, res) {
 	res.render('pages/index');
 });
 
-app.get('/produkter', function (req, res) {
-	res.render('pages/produkter');
-})
+require('./routes/routes') (app);
 
 app.get('/om-os', function (req, res) {
 	res.render('pages/om-os');
