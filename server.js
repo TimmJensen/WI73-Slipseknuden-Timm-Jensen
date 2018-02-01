@@ -8,16 +8,17 @@ const bodyParser = require("body-parser");
 
 const port = process.env.PORT || 8080;
 
-app.set('port', port);
-app.set('views', __dirname + '/views');
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-app.use(session({
-	secret: 'keyboard cat',
-	resave: false,
-	saveUninitialized: true,
-	cookie: { maxAge: 5 * 60 * 1000 } // 5 minutter
-}));
+// Forberedelse til Login module
+// app.set('port', port);
+// app.set('views', __dirname + '/views');
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.json());
+// app.use(session({
+// 	secret: 'keyboard cat',
+// 	resave: false,
+// 	saveUninitialized: true,
+// 	cookie: { maxAge: 5 * 60 * 1000 } // 5 minutter
+// }));
 
 // Serving files from the folder 'Public'
 app.use(express.static('public'))
